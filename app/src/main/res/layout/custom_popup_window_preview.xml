@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/custom_popup_menu_window"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_popup_background"
+    android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_newNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_note"
+                android:textColor="@color/stroke_color"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0_3dp"
+            android:background="@color/stroke_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_editNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_note"
+                android:textColor="@color/stroke_color"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0_3dp"
+            android:background="@color/stroke_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:imeOptions="actionDone|normal"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/export"
+                android:textColor="@color/stroke_color"
+                android:textStyle="italic"
+                android:contentDescription="@string/export_option"/>
+
+        </LinearLayout>
+
+</LinearLayout>

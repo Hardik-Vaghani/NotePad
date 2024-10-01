@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_text_size">@dimen/_18ssp</dimen>
+    <dimen name="default_medium_text_size">@dimen/_22ssp</dimen>
+    <dimen name="padding_4">@dimen/_4sdp</dimen>
+    <dimen name="padding_6">@dimen/_6sdp</dimen>
+    <dimen name="padding_8">@dimen/_8sdp</dimen>
+    <dimen name="padding_14">@dimen/_14sdp</dimen>
+    <dimen name="padding_10">@dimen/_10sdp</dimen>
+    <dimen name="padding_2">@dimen/_2sdp</dimen>
+    <dimen name="padding_0">0dp</dimen>
+    <dimen name="padding_20">@dimen/_20sdp</dimen>
+    <dimen name="_0_3dp">0.3dp</dimen>
+</resources>

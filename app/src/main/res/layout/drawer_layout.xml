@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_animation"
+    tools:ignore="HardcodedText"
+    tools:showIn="@layout/activity_main">
+
+    <!-- Main content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_closed"
+        android:elevation="1dp"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/navDrawer_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_openDrawer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="18dp"
+            android:padding="0dp"
+            android:src="@drawable/baseline_filter_vintage_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeAbleImageView" />
+
+        <!--    /// progress bar-->
+        <include
+            android:id="@+id/included_progress_layout"
+            layout="@layout/custom_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation drawer -->
+    <LinearLayout
+        android:id="@+id/navigation_drawer"
+        android:layout_width="290dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/drawer_bg"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        tools:ignore="NewApi">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:paddingHorizontal="@dimen/padding_14"
+            android:text="Index"
+            android:textColor="#715573"
+            android:textSize="@dimen/default_medium_text_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginHorizontal="@dimen/padding_14"
+                android:layout_marginTop="@dimen/padding_4"
+                android:background="@drawable/searchview_background"
+                android:paddingVertical="4dp"
+                app:animateMenuItems="true"
+                app:closeIcon="@android:drawable/btn_dialog"
+                app:dividerPadding="2dp"
+                app:queryBackground="@null"
+                app:searchHintIcon="@null"
+                app:searchIcon="@drawable/baseline_search_24"
+                app:showDividers="none"
+                app:theme="@style/SearchViewStyle" />
+
+            <LinearLayout
+                android:id="@+id/ll_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/padding_4"
+                android:background="@drawable/searchview_background">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_marginHorizontal="@dimen/padding_14"
+                    android:paddingVertical="4dp"
+                    android:src="@drawable/outline_settings_24"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.ShapeAbleImageView" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginHorizontal="@dimen/padding_14"
+            android:layout_marginTop="@dimen/padding_8"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:background="@drawable/divider_background" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="60dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="10"
+            tools:listitem="@layout/item_index_preview" />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

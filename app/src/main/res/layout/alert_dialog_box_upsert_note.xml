@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    tools:ignore="HardcodedText">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_fist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--            android:background="@drawable/custom_popup_background"-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tInLay_noteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tInEdt_noteTitle"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="File name"
+                    android:imeOptions="actionNext"
+                    android:includeFontPadding="true"
+                    android:inputType="text"
+                    android:textColor="@color/stroke_color"
+                    android:textColorHint="@color/stroke_color"
+                    android:textStyle="normal" />
+                <!--                    android:textSize="@dimen/_16ssp"-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tInLay_noteSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                app:boxBackgroundColor="@color/white"
+                app:boxBackgroundMode="outline"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/tInEdt_noteSubject"-->
+<!--                    style="@style/TextAppearance.MaterialComponents.Body1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="Subject type"-->
+<!--                    android:imeOptions="actionSend"-->
+<!--                    android:includeFontPadding="true"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textColor="@color/stroke_color"-->
+<!--                    android:textColorHint="@color/stroke_color"-->
+<!--                    android:textStyle="normal" />-->
+                <!--                    android:textSize="@dimen/_16ssp"-->
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView_noteSubject"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_42sdp"
+                    android:hint="Subject type"
+                    android:imeOptions="actionDone"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:includeFontPadding="true"
+                    android:inputType="text"
+                    android:textColor="@color/stroke_color"
+                    android:textColorHint="@color/stroke_color"
+                    android:textStyle="normal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_save"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/stroke_color"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@id/mb_back"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/cv_first"
+        app:layout_constraintTop_toBottomOf="@id/cv_first"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_back"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/stroke_color"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@id/cv_first"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/mb_save"
+        app:layout_constraintTop_toBottomOf="@id/cv_first"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+    <!--        app:layout_constraintBottom_toBottomOf="@id/cv_first"-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+    <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/tInLay_spelling"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    app:boxBackgroundColor="@color/white"
+    app:boxBackgroundMode="outline"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded">
+
+    &lt;!&ndash;                            style="@style/TextAppearance.MaterialComponents.Headline6"&ndash;&gt;
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tInEdt_spelling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Word"
+        android:imeOptions="actionNext"
+        android:includeFontPadding="true"
+        android:inputType="text"
+        android:textColor="@color/stroke_color"
+        android:textColorHint="@color/stroke_color"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+     <ProgressBar
+                        android:id="@+id/paginationProgressBar"
+                        style="?attr/progressBarStyle"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@android:color/transparent"
+                        android:indeterminateTint="@color/stroke_color"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+    -->
+

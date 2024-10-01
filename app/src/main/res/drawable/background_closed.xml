@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+<!--    <solid android:color="@color/material_dynamic_secondary80" /> &lt;!&ndash; Solid color &ndash;&gt;-->
+    <solid android:color="@color/white" /> <!-- Solid color -->
+    <corners android:radius="0dp" /> <!-- Corner radius -->
+    <stroke
+        android:width="0.0dp"
+        android:color="@color/stroke_color" /> <!-- Stroke color -->
+    <!-- You can add other attributes like stroke, gradient, etc. here -->
+</shape>

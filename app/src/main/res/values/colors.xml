@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="search_cursor_color">#FF1744</color>
+
+    <color name="colorGradientStart">#76FF03</color>
+    <color name="colorGradientCenter">#FFEA00</color>
+    <color name="colorGradientEnd">#C6FF00</color>
+    <color name="statusBarColor">#AAAAAA</color>
+    <color name="navigationBarColor">#AAAAAA</color>
+    <color name="stroke_color">#657985</color>
+    <color name="solid_color">#F9FCFF</color>
+</resources>
